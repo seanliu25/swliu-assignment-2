@@ -31,7 +31,8 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python3 -m venv venv  # Create the virtual environment
+        /opt/hostedtoolcache/Python/3.8.18/x64/bin/python3 -m venv venv  # Use the full Python path to create venv
+        ls -la venv/bin  # Check if the venv directory is created and contains necessary files
         . venv/bin/activate  # Activate the virtual environment
         pip install --upgrade pip  # Upgrade pip
         pip install -r requirements.txt  # Install dependencies
