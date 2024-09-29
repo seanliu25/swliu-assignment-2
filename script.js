@@ -1,4 +1,3 @@
-// app.js
 
 let dataset = [];
 let centroids = [];
@@ -62,7 +61,8 @@ function plotData() {
             marker: { color: 'gray', size: 8 },
             name: 'Dataset Points'
         });
-    } else {
+    } 
+    else {
         // Calculate max distance for each cluster if clusters exist
         if (centroids.length > 0 && maxDistance.length === 0) {
             calculateMaxDistances();
@@ -164,7 +164,7 @@ function initializeCentroids() {
         }
     } else if (method === 'manual') {
         manualCentroidSelection = true;
-        alert('Click on the plot to select the centroids manually');
+        alert(' Select the centroids');
     }
 
     plotData();

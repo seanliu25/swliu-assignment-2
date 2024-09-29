@@ -3,3 +3,4 @@ Flask-Cors
 numpy
 pillow  
 matplotlib  
+scikit-learn
