@@ -11,20 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the code from the repository
     - name: Checkout code
       uses: actions/checkout@v4
 
-    # Step 2: Set up Python 3.10 environment
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
         python-version: "3.10"
 
-    # Step 3: Install dependencies using Makefile
     - name: Install dependencies
       run: make install
 
-    # Step 4: Run the Flask application
-    - name: Run Flask Application
+    - name: Build application
       run: make run
