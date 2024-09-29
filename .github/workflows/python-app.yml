@@ -22,5 +22,8 @@ jobs:
     - name: Install dependencies
       run: make install
 
-    - name: Build application
-      run: make run
+    - name: Run the application (with sleep)
+      run: |
+        make run &
+        sleep 10 
+        pkill flask
