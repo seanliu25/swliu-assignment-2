@@ -23,14 +23,14 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python3 -m venv venv 
-        . venv/bin/activate
-        pip install --upgrade pip
-        pip install -r requirements.txt
+        python3 -m venv venv  # Create the virtual environment
+        . venv/bin/activate  # Activate the virtual environment
+        pip install --upgrade pip  # Upgrade pip
+        pip install -r requirements.txt  # Install dependencies
 
     - name: Run the application
       run: |
-        . venv/bin/activate
-        make run &
-        sleep 10
-        kill $!
+        . venv/bin/activate  # Activate the virtual environment again
+        make run &  # Run the app and wait for a few seconds
+        sleep 10  # Wait for the server to start up
+        kill $!  # Stop the server after the test
