@@ -21,6 +21,14 @@ jobs:
       with:
         python-version: '3.8'
 
+    - name: Verify Python installation
+      run: |
+        python3 --version  # Check Python version
+        which python3  # Check Python path
+
+    - name: Install python3-venv (required for virtualenv)
+      run: sudo apt-get install python3-venv  # Ensure python3-venv is installed
+
     - name: Install dependencies
       run: |
         python3 -m venv venv  # Create the virtual environment
